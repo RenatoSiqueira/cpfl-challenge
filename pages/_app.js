@@ -8,10 +8,11 @@ const App = ({Component, pageProps}) => {
             <Head>
                 <title>Início | CPFL</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+                <meta httpEquiv="Content-Language" content="pt-br"/>
                 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
                 <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
-                <meta name="theme-color" content="#ffffff" />
+                <meta name="theme-color" content="#fff" />
 
                 <meta name="application-name" content="CPFL Challenge" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />

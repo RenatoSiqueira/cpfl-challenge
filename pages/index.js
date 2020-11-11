@@ -9,8 +9,8 @@ import Chatbot from '../components/Chatbot'
 
 const Index = () => (
     <>
-        <Chatbot/>
         <Navbar/>
+        <Chatbot/>
         <Hero />
         <FastAccess/>
         <Footer/>
