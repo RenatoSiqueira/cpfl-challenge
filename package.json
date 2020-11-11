@@ -21,7 +21,8 @@
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "9.8.6",
     "postcss-import": "^13.0.0",
-    "tailwindcss": "^1.9.6"
+    "tailwindcss": "^1.9.6",
+    "xo": "^0.34.2"
   },
   "repository": {
     "type": "git",
