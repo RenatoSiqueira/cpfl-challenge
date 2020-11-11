@@ -7,10 +7,10 @@ import Footer from '../components/Footer'
 
 const Index = () => (
     <>
-    <Navbar/>
-    <Hero />
-    <FastAccess/>
-    <Footer/>
+        <Navbar/>
+        <Hero />
+        <FastAccess/>
+        <Footer/>
     </>
 )
 

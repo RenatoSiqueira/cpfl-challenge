@@ -2,20 +2,30 @@ import React from 'react'
 import Head from 'next/head'
 import '../css/styles.css'
 
-const App = ({ Component, pageProps }) => {
+const App = ({Component, pageProps}) => {
     return (
         <>
-        <Head>
-            <title>Início | CPFL</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-            <link rel="manifest" href="/site.webmanifest" />
-            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-            <meta name="theme-color" content="#ffffff" />
-        </Head>
-        <Component {...pageProps}/>
+            <Head>
+                <title>Início | CPFL</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+                <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
+                <meta name="theme-color" content="#ffffff" />
+
+                <meta name="application-name" content="CPFL Challenge" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+                <meta name="apple-mobile-web-app-title" content="CPFL Challenge" />
+                <meta name="description" content="CPFL Challenge" />
+                <meta name="format-detection" content="telephone=no" />
+                <meta name="mobile-web-app-capable" content="yes" />
+
+                <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+                <link rel="manifest" href="/manifest.json" />
+                <link rel="shortcut icon" href="/icons/favicon.ico" />
+            </Head>
+            <Component {...pageProps}/>
         </>
     )
 }
