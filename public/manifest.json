@@ -1,0 +1,17 @@
+{
+	"name": "CPFL Challenge",
+	"short_name": "CPFL",
+	"description": "CPFL Challenge",
+	"display": "standalone",
+	"orientation": "portrait",
+	"theme_color": "#FFFFFF",
+	"background_color": "#FFFFFF",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "/icons/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	]
+}
