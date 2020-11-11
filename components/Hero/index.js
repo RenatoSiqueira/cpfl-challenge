@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Hero = () => (   
+const Hero = () => (
     <header>
-        <div className="h-128 w-full bg-cover bg-center" style={{ backgroundImage: 'url(/images/energy.jpg)' }}>
+        <div className="h-128 w-full bg-cover bg-center" style={{backgroundImage: 'url(/images/energy.jpg)'}}>
             <div className="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
                 <div className="text-center">
                     <h1 className="text-white text-2xl font-semibold uppercase md:text-3xl">Solicite sua</h1>
