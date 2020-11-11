@@ -73,10 +73,10 @@ const App = () => {
 
   return (
       <ThemeProvider theme={theme}>
-      <ChatBot
+        <ChatBot
+        floating={true}
         handleEnd={handleEnd}
         headerTitle="Solicitação do Serviço"
-        speechSynthesis={{ enable: true, lang: 'pt-BR' }}
         steps={[
             {
               id: '1',
