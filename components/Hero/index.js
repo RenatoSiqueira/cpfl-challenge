@@ -1,16 +1,27 @@
 import React from 'react'
 
 const Hero = () => (
-    <header>
-        <div className="h-128 w-full bg-cover bg-center" style={{backgroundImage: 'url(/images/energy.jpg)'}}>
-            <div className="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
-                <div className="text-center">
-                    <h1 className="text-white text-2xl font-semibold uppercase md:text-3xl">Solicite sua</h1>
-                    <button className="mt-4 px-4 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Segunda Via</button>
-                </div>
-            </div>
-        </div>
-    </header>
+<section class="bg-blue-100 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-0">
+  <div class="py-24 px-4 lg:px-20 flex flex-col justify-center items-start">
+    <span class="badge text-white bg-blue-900 mb-3">Pre Beta</span>
+    <h1 class="text-4xl md:text-4xl lg:text-5xl text-blue-900 leading-tight font-bold mb-6">Great customer relationships start here.</h1>
+    <form class="w-full mb-6">
+      <label class="sr-only">Your Email</label>
+      <div class="block lg:hidden">
+        <input class="form-input form-input-lg text-blue-900" type="email" placeholder="Enter your email..." required="true" />
+        <button class="btn btn-secondary btn-lg w-full mt-2" type="submit">Get Started</button>
+      </div>
+      <div class="form-append w-full hidden lg:flex">
+        <input class="form-input form-input-lg text-blue-900" type="email" placeholder="Enter your email..." required="true" />
+        <button class="btn btn-secondary btn-lg" type="submit">Get Started</button>
+      </div>
+    </form>
+    <p class="text-blue-800 text-sm mb-4 pr-0 lg:pr-16">Get the #1 Business Messenger and start delivering personalized experiences at every stage of the customer journey.</p>
+  </div>
+  <div>
+    <img src="https://images.unsplash.com/photo-1531548731165-c6ae86ff6491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" alt="3 women looking at a laptop" class="w-full object-cover h-64 md:h-full bg-gray-100" loading="lazy" />
+  </div>
+</section>
 )
 
 export default Hero
