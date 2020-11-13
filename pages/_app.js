@@ -1,8 +1,19 @@
 import React from 'react'
 import Head from 'next/head'
 import '../css/styles.css'
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from '~/theme';
 
 const App = ({Component, pageProps}) => {
+    React.useEffect(() => {
+      // Remove the server-side injected CSS.
+      const jssStyles = document.querySelector('#jss-server-side');
+      if (jssStyles) {
+        jssStyles.parentElement.removeChild(jssStyles);
+      }
+    }, []);
+
     return (
         <>
             <Head>
@@ -26,7 +37,10 @@ const App = ({Component, pageProps}) => {
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="shortcut icon" href="/icons/favicon.ico" />
             </Head>
-            <Component {...pageProps}/>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <Component {...pageProps} />
+            </ThemeProvider>
         </>
     )
 }
