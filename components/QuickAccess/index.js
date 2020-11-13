@@ -1,150 +1,130 @@
 import React from 'react'
-import Image from 'next/image'
 
 const QuickAccess = () => (
-    <div class="py-12 bg-gray-100">
-    <div class="container flex flex-col items-center justify-center px-4 pt-2 pb-8 mx-auto sm:px-6 lg:px-8">
-        <p
-            class="inline-block px-3 py-1 mb-4 text-xs font-semibold leading-tight tracking-widest text-indigo-700 uppercase bg-indigo-200 rounded-full">
-            Watch And Learn with
-        </p>
+  <div class="pb-1 text-center text-gray-700 bg-gray-100 bg-cover">
+    <div class="container relative max-w-2xl px-5 pt-3 mx-auto sm:py-12 lg:px-0">
         <h2
-            class="flex justify-center font-sans text-3xl font-bold leading-none tracking-tight text-center text-gray-900 b-6 sm:text-4xl md:mx-auto">
-            <svg class="w-8 h-8 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z">
-                </path>
-            </svg>
-            <span class="relative">Our Latest Courses</span> </h2>
-        <a href="#" class="mt-3 text-sm font-semibold text-indigo-600 underline">View Our Full Library of Courses</a>
+            class="mb-10 text-4xl font-extrabold leading-10 tracking-tight text-left text-gray-900 sm:text-5xl sm:leading-none md:text-6xl sm:text-center">
+            Awesome <span class="inline-block text-indigo-500">Features</span></h2>
+        <p class="mt-5 text-xl text-left opacity-75 sm:text-center">Here are some awesome features that we really think
+            you'll like. With features like this you'll want to punch yourself in the face for not signing up sooner.
+        </p>
+    </div>
+    <div class="my-8">
+        <div class="max-w-xl px-4 mx-auto sm:px-6 lg:max-w-screen-xl lg:px-8">
+            <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+                <div class="p-16 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl">
+                    <div
+                        class="relative inline-flex items-center justify-center w-16 h-16 overflow-hidden text-white rounded-full">
+                        <svg class="relative w-12 h-12 text-indigo-500" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="mt-3 mb-6">
+                        <h5 class="pb-2 text-xl font-bold leading-6 text-gray-600">Bookmarks</h5>
+                        <p class="mt-1 text-base leading-6 text-gray-500">
+                            Bookmarking feature allows you to bookmark and save any content.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="p-16 mt-10 transition-all duration-150 bg-white rounded-lg shadow-xl lg:mt-0 ease hover:shadow-2xl">
+                    <div
+                        class="relative inline-flex items-center justify-center w-16 h-16 overflow-hidden text-white rounded-full">
+                        <svg class="relative w-12 h-12 text-indigo-500" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="mt-3 mb-6">
+                        <h5 class="pb-2 text-xl font-bold leading-6 text-gray-600">Notifications</h5>
+                        <p class="mt-1 text-base leading-6 text-gray-500">
+                            Automated notifications that will keep your team in the know.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="p-16 mt-10 transition-all duration-150 bg-white rounded-lg shadow-xl lg:mt-0 ease hover:shadow-2xl">
+                    <div
+                        class="relative inline-flex items-center justify-center w-16 h-16 overflow-hidden text-white rounded-full">
+                        <svg class="relative w-12 h-12 text-indigo-500" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="mt-3 mb-6">
+                        <h5 class="pb-2 text-xl font-bold leading-6 text-gray-600">Messages</h5>
+                        <p class="mt-1 text-base leading-6 text-gray-500">
+                            A built-in message system to help your team communicate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <div class="grid max-w-lg gap-5 mx-auto mt-12 md:grid-cols-2 lg:grid-cols-3 md:max-w-none">
-            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-                <div class="relative flex-shrink-0">
-                    <img class="object-cover w-full h-56"
-                        src="https://cdn.devdojo.com/episode/images/August2020/laravel-livewire-introduction1.jpg"
-                        alt="Cover image for livewire introduction course." />
-                    <span
-                        class="absolute bottom-0 right-0 inline-flex items-center px-3 py-1 mr-4 -mb-3 text-xs font-medium leading-tight text-gray-800 bg-gray-100 border rounded-full">12
-                        reviews</span>
-                </div>
-                <div class="flex flex-col justify-between flex-1">
-                    <div class="flex flex-col justify-between flex-1 p-6 bg-white">
-                        <div>
-                            <a href="#" class="block text-xl font-semibold leading-7 text-gray-900">Mastering
-                                Livewire</a>
-                            <p class="mt-3 text-base leading-6 text-gray-500">Tired of Vue or React? Why not try Livewire, the fullstack framework for dynamic interfaces.</p>
-                        </div>
-                        <p class="mt-3 text-sm font-medium leading-5">
-                            <a href="#" class="inline-block">
-                                <span
-                                    class="inline-flex items-center px-3 py-1 text-xs font-medium leading-tight text-blue-800 bg-blue-100 rounded-full">Livewire</span>
-                            </a>
+    <div class="my-8">
+        <div class="max-w-xl px-4 mx-auto sm:px-6 lg:max-w-screen-xl lg:px-8">
+            <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+                <div class="p-16 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl">
+                    <div
+                        class="relative inline-flex items-center justify-center w-16 h-16 overflow-hidden text-white rounded-full">
+                        <svg class="relative w-12 h-12 text-indigo-500" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <div class="mt-3 mb-6">
+                        <h5 class="pb-2 text-xl font-bold leading-6 text-gray-600">Integrations</h5>
+                        <p class="mt-1 text-base leading-6 text-gray-500">
+                            Drop-in code that you can use in any of your products.
                         </p>
                     </div>
-                    <div class="flex items-center p-6 bg-gray-100">
-                        <div class="flex-shrink-0">
-                            <a href="#">
-                                <img class="w-10 h-10 rounded-full"
-                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                    alt="" />
-                            </a>
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium leading-5 text-gray-900">
-                                <a href="#" class="hover:underline">Jane Cooper</a>
-                            </p>
-                            <div class="text-xs leading-5 text-gray-600">
-                                <time datetime="2020-05-31">May 31, 2020</time>
-                            </div>
-                        </div>
+                </div>
+                <div
+                    class="p-16 mt-10 transition-all duration-150 bg-white rounded-lg shadow-xl lg:mt-0 ease hover:shadow-2xl">
+                    <div
+                        class="relative inline-flex items-center justify-center w-16 h-16 overflow-hidden text-white rounded-full">
+                        <svg class="relative w-12 h-12 text-indigo-500" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
                     </div>
-                </div>
-            </div>
-            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-                <div class="relative flex-shrink-0">
-                    <img class="object-cover w-full h-56"
-                        src="https://cdn.devdojo.com/images/September2017/creating-a-laravel-package-sd.jpg"
-                        alt="Cover image for creating a laravel package course." />
-                    <span
-                        class="absolute bottom-0 right-0 inline-flex items-center px-3 py-1 mr-4 -mb-3 text-xs font-medium leading-tight text-gray-800 bg-gray-100 border rounded-full">16
-                        reviews</span>
-                </div>
-                <div class="flex flex-col justify-between flex-1">
-                    <div class="flex flex-col justify-between flex-1 p-6 bg-white">
-                        <div>
-                            <a href="#" class="block text-xl font-semibold leading-7 text-gray-900">Create a Laravel
-                                Package</a>
-                            <p class="mt-3 text-base leading-6 text-gray-500">Join Richard on the adventure of creating and releasing a new Laravel package.</p>
-                        </div>
-                        <p class="mt-3 text-sm font-medium leading-5">
-                            <a href="#" class="inline-block">
-                                <span
-                                    class="inline-flex items-center px-3 py-1 text-xs font-medium leading-tight text-red-800 bg-red-100 rounded-full">Laravel</span>
-                            </a>
+                    <div class="mt-3 mb-6">
+                        <h5 class="pb-2 text-xl font-bold leading-6 text-gray-600">Settings</h5>
+                        <p class="mt-1 text-base leading-6 text-gray-500">
+                            Settings and configurations that will simplify your life.
                         </p>
                     </div>
-                    <div class="flex items-center p-6 bg-gray-100">
-                        <div class="flex-shrink-0">
-                            <a href="#">
-                                <img class="w-10 h-10 rounded-full"
-                                    src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
-                                    alt="" />
-                            </a>
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium leading-5 text-gray-900">
-                                <a href="#" class="hover:underline">Richard Foster</a>
-                            </p>
-                            <div class="text-xs leading-5 text-gray-600">
-                                <time datetime="2020-06-03">Jun 3, 2020</time>
-                            </div>
-                        </div>
+                </div>
+                <div
+                    class="p-16 mt-10 transition-all duration-150 bg-white rounded-lg shadow-xl lg:mt-0 ease hover:shadow-2xl">
+                    <div
+                        class="relative inline-flex items-center justify-center w-16 h-16 overflow-hidden text-white rounded-full">
+                        <svg class="relative w-12 h-12 text-indigo-500" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
                     </div>
-                </div>
-            </div>
-            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-                <div class="relative flex-shrink-0">
-                    <img class="object-cover w-full h-56"
-                        src="https://cdn.devdojo.com//images/March2017/laravel-dusk-sd.jpg"
-                        alt="Cover image for laravel dusk course." />
-                    <span
-                        class="absolute bottom-0 right-0 inline-flex items-center px-3 py-1 mr-4 -mb-3 text-xs font-medium leading-tight text-gray-800 bg-gray-100 border rounded-full">22
-                        reviews</span>
-                </div>
-                <div class="flex flex-col justify-between flex-1">
-                    <div class="flex flex-col justify-between flex-1 p-6 bg-white">
-                        <div>
-                            <a href="#" class="text-xl font-semibold leading-7 text-gray-900">Laravel Dusk</a>
-                            <p class="mt-3 text-base leading-6 text-gray-500">Learn how Laravel Dusk can help you to feature test your SPA automatically with a simple API.</p>
-                        </div>
-                        <p class="mt-4 text-sm font-medium leading-5">
-                            <a href="#" class="inline-block">
-                                <span
-                                    class="inline-flex items-center px-3 py-1 text-xs font-medium leading-tight text-red-800 bg-red-100 rounded-full">Laravel</span>
-                            </a>
-                            <a href="#" class="inline-block">
-                                <span
-                                    class="inline-flex items-center px-3 py-1 text-xs font-medium leading-tight text-purple-800 bg-purple-100 rounded-full">Dusk</span>
-                            </a>
+                    <div class="mt-3 mb-6">
+                        <h5 class="pb-2 text-xl font-bold leading-6 text-gray-600">Monetized</h5>
+                        <p class="mt-1 text-base leading-6 text-gray-500">
+                            Our system will help you gain the highest possible revenue.
                         </p>
-                    </div>
-                    <div class="flex items-center p-6 bg-gray-100">
-                        <div class="flex-shrink-0">
-                            <a href="#">
-                                <img class="w-10 h-10 rounded-full"
-                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-                                    alt="" />
-                            </a>
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium leading-5 text-gray-900">
-                                <a href="#" class="hover:underline">John Cooper</a>
-                            </p>
-                            <div class="text-xs leading-5 text-gray-600">
-                                <time datetime="2020-06-04">Jun 4, 2020</time>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

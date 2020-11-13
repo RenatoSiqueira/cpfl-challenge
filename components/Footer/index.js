@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 const Footer = () => (
-    <footer class="container mx-auto py-12 px-4">
+  <footer class="container mx-auto py-12 px-4">
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-11 gap-10 lg:gap-20 mb-3">
     <div class="col-span-3">
       <a href="#" title="Hellonext Home Page" class="flex items-center">
@@ -60,6 +60,7 @@ const Footer = () => (
     <p class="text-gray-700 font-medium text-xs text-left mb-0 md:mb-0">Copyright &copy; 2020 Hellonext</p>
   </div>
 </footer>
+
 )
 
 export default Footer
