@@ -2,7 +2,7 @@ import React from 'react'
 
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import FastAccess from '../components/FastAccess'
+import QuickAccess from '../components/QuickAccess'
 import AnotherServices from '../components/AnotherServices'
 import CTA from '../components/CTA'
 import AnotherPartners from '../components/AnotherPartners'
@@ -15,7 +15,7 @@ const Index = () => (
         <Navbar/>
         <Chatbot/>
         <Hero />
-        <FastAccess/>
+        <QuickAccess/>
         <AnotherServices/>
         <CTA/>
         <div className='flex flex-row mt-10 mb-10'>
