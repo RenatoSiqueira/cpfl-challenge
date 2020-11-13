@@ -2,14 +2,14 @@ import React from 'react'
 import Image from 'next/image'
 
 const Navbar = () => (
-    <nav className="bg-white shadow">
+    <nav className="w-full z-30 bg-white shadow-lg space-x-4 border-b border-blue-600">
         <div className="container mx-auto px-6 py-3 ">
             <div className="md:flex md:items-center md:justify-between">
                 <div className="flex justify-between items-center">
                     <div className="text-xl font-semibold text-gray-700">
                         <Image
                             src="/images/brand/logo-cpfl-energia.png"
-                            alt="CPFL"
+                            alt="CPFL logo"
                             width={99}
                             height={61}
                         />
@@ -24,7 +24,7 @@ const Navbar = () => (
                     </div>
                 </div>
 
-                <div className="hidden -mx-4 md:flex md:items-center">
+                <div className="hidden mx-4 md:flex md:items-center">
                     <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600">CPFL</a>
                     <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600">Serviços Essenciais</a>
                     <a href="#" className="block mx-4 mt-2 md:mt-0 text-sm text-gray-700 capitalize hover:text-blue-600">Atendimento</a>
