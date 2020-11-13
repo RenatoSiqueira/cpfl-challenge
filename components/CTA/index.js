@@ -22,13 +22,13 @@ const CTA = () => (
             </div>
         </div>
         <div className="bottom-0 right-0 mb-0 mr-3 lg:absolute lg:-mb-12">
-            <Image 
+            {/* <Image 
                 src='/images/cta.png'
                 alt='Notícia'
-                width={448}
-                height={336}
+                // width={348}
+                // height={236}
                 className="max-w-xs mb-4 opacity-75 md:max-w-2xl lg:max-w-lg xl:mb-0 xl:max-w-md"
-            />
+            /> */}
         </div>
     </div>
 </div>

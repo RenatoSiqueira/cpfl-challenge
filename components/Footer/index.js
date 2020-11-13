@@ -2,6 +2,21 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+const MockData = [
+    { 
+      title:'Institucional',
+      items:['Quem Somos', 'Energias Sustentáveis', 'Governança Corporativa', 'Trabalhe conosco', 'Fornecedores', 'Relatório Anual', 'Ética CPFL']
+    },
+    { 
+      title:'Atendimento',
+      items:['Serviços Online', 'Para Você', 'Para Grandes Empresas', 'Credenciados', 'Informações ao Consumidor', 'Investidores', 'Imprensa']
+    },
+    {
+      title:'Fale Conosco',
+      items:['Serviços Online', 'Dúvidas Frequentes', 'Facebook', 'Twitter', 'Informações ao Consumidor', 'Ouvidoria']
+    },
+]
+
 const BlockItems = ({title, items}) => (
   <nav className="col-span-1 md:col-span-1 lg:col-span-2">
   <p className="uppercase text-gray-600 text-xs tracking-wider font-semibold mb-3">{title}</p>
@@ -35,18 +50,11 @@ const Footer = () => (
       </a>
      </Link>
     </div>
-    <BlockItems 
-      title='Institucional'
-      items={['Quem Somos', 'Energias Sustentáveis', 'Governança Corporativa', 'Trabalhe conosco', 'Fornecedores', 'Relatório Anual', 'Ética CPFL']}
-    />
-    <BlockItems 
-      title='Atendimento'
-      items={['Serviços Online', 'Para Você', 'Para Grandes Empresas', 'Credenciados', 'Informações ao Consumidor', 'Investidores', 'Imprensa']}
-    />
-    <BlockItems
-      title='Fale Conosco'
-      items={['Serviços Online', 'Dúvidas Frequentes', 'Facebook', 'Twitter', 'Informações ao Consumidor', 'Ouvidoria']}
-    />
+    {
+      MockData.map((e, i) => (
+        <BlockItems key={i} {...e} />
+      ))
+    }
   </div>
   <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-t border-gray-200 pt-10 mt-10">
     <p className="text-gray-700 font-medium text-xs text-left mb-2 md:mb-0">

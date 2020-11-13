@@ -16,13 +16,8 @@ const Index = () => (
         <Chatbot/>
         <Hero />
         <QuickAccess/>
-        <MoreCPFL/>
         <CTA/>
-        <div className='flex flex-row mt-10 mb-10'>
-        <AnotherPartners/>
-        <AnotherPartners/>
-        <AnotherPartners/>
-        </div>
+        <MoreCPFL/>
         <Footer/>
     </>
 )
