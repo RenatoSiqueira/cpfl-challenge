@@ -10,7 +10,7 @@ const MockData = [
 ]
 
 const Item = ({title, desc}) => (
-    <div className="p-4 md:w-1/3">
+    <div className="p-4 w-full md:w-1/3">
         <div className="p-16 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl">
             <div
                 className="relative inline-flex items-center justify-center w-16 h-16 overflow-hidden text-white rounded-full">
@@ -32,7 +32,7 @@ const Item = ({title, desc}) => (
 )
 
 const QuickAccess = () => (
-  <div className="pb-1 text-center text-gray-700 bg-gray-100 bg-cover mb-10">
+  <div className="pb-1 pt-10 md:pt-2 text-center text-gray-700 bg-gray-100 bg-cover mb-10">
     <div className="container relative max-w-2xl px-5 pt-3 mx-auto sm:py-12 lg:px-0">
         <h2
             className="mb-3 text-4xl font-extrabold leading-10 tracking-tight text-left text-gray-900 sm:text-5xl sm:leading-none md:text-4xl sm:text-center">

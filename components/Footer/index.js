@@ -36,18 +36,18 @@ const BlockItems = ({title, items}) => (
 
 const Footer = () => (
   <footer className="container mx-auto py-12 px-4">
-  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-11 gap-10 lg:gap-20 mb-3">
+  <div className="grid grid-cols gap-3 md:grid-cols-3 lg:grid-cols-11 lg:gap-20 mb-3">
     <div className="col-span-3">
       <Link href='/' >
-      <a className="flex items-center">
-        <Image 
-          src='/images/brand/logo-cpfl-energia.png'
-          alt='CPFL'
-          width={100}
-          height={80}
-        />
-        <span className="sr-only">CPFL</span>
-      </a>
+        <a className="flex items-center mb-3 place-content-center md:place-content-start">
+          <Image 
+            src='/images/brand/logo-cpfl-energia.png'
+            alt='CPFL'
+            width={100}
+            height={80}
+          />
+          <span className="sr-only">CPFL</span>
+        </a>
      </Link>
     </div>
     {
@@ -56,9 +56,15 @@ const Footer = () => (
       ))
     }
   </div>
-  <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-t border-gray-200 pt-10 mt-10">
+  <div className="flex flex-col items-center md:flex-row justify-between items-start md:items-center border-t border-gray-200 pt-10 mt-10">
     <p className="text-gray-700 font-medium text-xs text-left mb-2 md:mb-0">
-      Todos os direitos reservados - Política de Privacidade - Termos de Serviço
+      Todos os direitos reservados
+    </p>
+    <p className="text-gray-700 font-medium text-xs text-left mb-2 md:mb-0">
+      Política de Privacidade
+    </p>
+    <p className="text-gray-700 font-medium text-xs text-left mb-2 md:mb-0">
+      Termos de Serviço
     </p>
     <p className="text-gray-700 font-medium text-xs text-left mb-0 md:mb-0">Copyright &copy; 2020 CPFL</p>
   </div>
