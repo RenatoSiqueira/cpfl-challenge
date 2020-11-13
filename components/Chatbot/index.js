@@ -34,10 +34,10 @@ const Review = ({steps: { service, unid }}) => {
   
 const theme = {
     background: '#f5f8fb',
-    headerBgColor: '#667eea',
+    headerBgColor: '#4299e1',
     headerFontColor: '#fff',
     headerFontSize: '15px',
-    botBubbleColor: '#667eea',
+    botBubbleColor: '#4299e1',
     botFontColor: '#fff',
     userBubbleColor: '#fff',
     userFontColor: '#4a4a4a',
