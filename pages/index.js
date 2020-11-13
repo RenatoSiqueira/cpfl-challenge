@@ -5,7 +5,6 @@ import Hero from '../components/Hero'
 import QuickAccess from '../components/QuickAccess'
 import MoreCPFL from '../components/MoreCPFL'
 import CTA from '../components/CTA'
-import AnotherPartners from '../components/AnotherPartners'
 import Footer from '../components/Footer'
 
 import Chatbot from '../components/Chatbot'

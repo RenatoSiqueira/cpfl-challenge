@@ -32,12 +32,12 @@ const Item = ({title, desc}) => (
 )
 
 const QuickAccess = () => (
-  <div className="pb-1 pt-10 md:pt-2 text-center text-gray-700 bg-gray-100 bg-cover mb-10">
+  <div className="pb-1 pt-10 md:pt-2 text-center text-gray-700 bg-gray-100 bg-cover pb-10">
     <div className="container relative max-w-2xl px-5 pt-3 mx-auto sm:py-12 lg:px-0">
         <h2
-            className="mb-3 text-4xl font-extrabold leading-10 tracking-tight text-left text-gray-900 sm:text-5xl sm:leading-none md:text-4xl sm:text-center">
+            className="mb-3 text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-4xl sm:text-center">
             Acesso <span className="inline-block text-blue-500">Rápido</span></h2>
-        <p className="mt-1 text-xl text-left opacity-75 sm:text-center">
+        <p className="mt-1 text-xl opacity-75 text-center">
             Serviços Essenciais de acesso direto.
         </p>
     </div>
