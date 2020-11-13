@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-export default function SignIn() {
+export default function login() {
     const classes = useStyles()
 
     return (
@@ -46,7 +46,7 @@ export default function SignIn() {
                     <LockOutlinedIcon />
                 </Avatar>
                 <Typography component="h1" variant="h5">
-          Login
+                    Login
                 </Typography>
                 <form className={classes.form} noValidate>
                     <TextField
@@ -82,12 +82,12 @@ export default function SignIn() {
                         color="primary"
                         className={classes.submit}
                     >
-            Entrar
+                        Entrar
                     </Button>
                     <Grid container>
                         <Grid item xs>
                             <Link href="#" variant="body2">
-                Esqueceu a senha?
+                                Esqueceu a senha?
                             </Link>
                         </Grid>
                         <Grid item>
