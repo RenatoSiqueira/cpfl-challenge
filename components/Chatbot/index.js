@@ -1,60 +1,39 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import ChatBot from 'react-simple-chatbot';
-import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+import { useRouter } from 'next/router'
+import slugify from 'slugify'
 
-class Review extends Component {
-    constructor(props) {
-      super(props);
-  
-      this.state = {
-        name: '',
-        service: '',
-        unid: '',
-      };
-    }
-  
-    componentWillMount() {
-      const { steps } = this.props;
-      const { name, service, unid } = steps;
-  
-      this.setState({ name, service, unid });
-    }
-  
-    render() {
-      const { name, service, unid } = this.state;
-      return (
-        <div style={{ width: '100%' }}>
-          <h3>Solicitação</h3>
-          <table>
-            <tbody>
-              <tr>
-                <td>Nome: {name.value}</td>
-              </tr>
-              <tr>
-                <td>Serviço: {service.value}</td>
-              </tr>
-              <tr>
-                <td>Unidade Consumidora: {unid.value}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      );
-    }
-  }
-  
-  Review.propTypes = {
-    steps: PropTypes.object,
-  };
-  
-  Review.defaultProps = {
-    steps: undefined,
-  };
+const Review = ({steps: { service, unid }}) => {
+  const [data, setData] = useState({})
 
+  useEffect(() => {
+    setData({ service: service.value, unid: unid.value })
+  }, [service, unid])
+
+  return (
+    <div style={{ width: '100%' }}>
+      <h3>Você Deseja:</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Serviço:</strong><br/>
+            {data.service}</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Unid. Consumidora</strong><br/>
+              {data.unid}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  )
+}
+  
 const theme = {
     background: '#f5f8fb',
-    // fontFamily: 'Helvetica Neue',
     headerBgColor: '#EF6C00',
     headerFontColor: '#fff',
     headerFontSize: '15px',
@@ -65,32 +44,26 @@ const theme = {
   };
 
 const App = () => {
-    const handleEnd = ({ steps, values }) => {
-        // console.log(steps);
-        // console.log(values);
-        alert(`Chat handleEnd callback! Number: ${values[0]}`);
-      }
+  const router = useRouter()
+
+  const handleEnd = ({ steps, values }) => {
+    const slug = slugify(values[0], { lower: true})
+    router.push(`servicos/${slug}/${values[1]}`)
+    }
 
   return (
       <ThemeProvider theme={theme}>
         <ChatBot
         floating={true}
         handleEnd={handleEnd}
+        speechSynthesis={{ enable: true, lang: 'pt-br' }}
         headerTitle="Solicitação do Serviço"
+        placeholder='Escreva aqui...'
+        userDelay='300'
         steps={[
             {
               id: '1',
-              message: 'Qual seu nome?',
-              trigger: 'name',
-            },
-            {
-              id: 'name',
-              user: true,
-              trigger: '3',
-            },
-            {
-              id: '3',
-              message: 'Olá {previousValue}! Qual serviço você busca?',
+              message: 'Olá, Qual serviço você busca?',
               trigger: 'service',
             },
             {
@@ -139,8 +112,8 @@ const App = () => {
             {
               id: 'update-question',
               options: [
-                { value: 'yes', label: 'Sim', trigger: 'update-yes' },
-                { value: 'no', label: 'Não', trigger: 'end-message' },
+                { value: 'no', label: 'Não. Está tudo certo.', trigger: 'end-message' },
+                { value: 'yes', label: 'Sim, quero corrigir.', trigger: 'update-yes' },
               ],
             },
             {
@@ -151,15 +124,9 @@ const App = () => {
             {
               id: 'update-fields',
               options: [
-                { value: 'name', label: 'Nome', trigger: 'update-name' },
-                { value: 'service', label: 'Serviço', trigger: 'update-service' },
+                { value: 'service', label: 'Alterar Serviço', trigger: 'update-service' },
                 { value: 'unid', label: 'Unidade Consumidora', trigger: 'update-unid' },
               ],
-            },
-            {
-              id: 'update-name',
-              update: 'name',
-              trigger: '7',
             },
             {
               id: 'update-service',
@@ -173,7 +140,7 @@ const App = () => {
             },
             {
               id: 'end-message',
-              message: 'Obrigado. Seus dados foram salvos.',
+              message: 'Aguarde...',
               end: true,
             },
           ]}
