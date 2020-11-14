@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "../../components/Head";
+import Head from "~/components/Head";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Box from "@material-ui/core/Box";

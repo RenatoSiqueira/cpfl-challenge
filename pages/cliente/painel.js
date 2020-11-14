@@ -1,5 +1,6 @@
 import React from "react";
-import Head from "../../components/Head";
+import { useRouter } from "next/router";
+import Head from "~/components/Head";
 
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
@@ -116,6 +117,8 @@ const useStyles = makeStyles(theme => ({
 
 export default function painel() {
   const classes = useStyles();
+  const router = useRouter();
+
   const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -180,7 +183,7 @@ export default function painel() {
       <Grid container spacing={3} className={classes.container}>
         <Grid item xs={12} md={6}>
           <Paper className={classes.pointsPaper}>
-            <UserPointsCard />
+            <UserPointsCard onClick={() => router.push("/cliente/cashback")}/>
           </Paper>
         </Grid>
 

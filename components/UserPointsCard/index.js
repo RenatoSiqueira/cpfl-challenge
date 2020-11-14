@@ -4,10 +4,6 @@ import Moment from "moment";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 
-function preventDefault(event) {
-  event.preventDefault();
-}
-
 const useStyles = makeStyles({
   depositContext: {
     flex: 1
@@ -20,7 +16,7 @@ const useStyles = makeStyles({
 
 Moment.locale("pt-br");
 
-export default function UserPointsCard() {
+export default function UserPointsCard({ onClick }) {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -43,7 +39,7 @@ export default function UserPointsCard() {
         em {Moment().format("ll")}
       </Typography>
       <div className="underline mt-1">
-        <Link href="#" onClick={preventDefault}>
+        <Link href="#" onClick={onClick}>
           Trocar pontos por benefícios
         </Link>
       </div>
