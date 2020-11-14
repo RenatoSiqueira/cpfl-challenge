@@ -31,7 +31,7 @@ export default function UserPointsCard() {
           </Typography>
           <div>
               <Link color="primary" href="#" onClick={preventDefault}>
-                  Trocar pontos por benefícios >
+                  Trocar pontos por benefícios
               </Link>
           </div>
         </React.Fragment>
