@@ -1,11 +1,10 @@
 import React from "react";
 import Icon from "@material-ui/core/Icon";
-import { Height } from "@material-ui/icons";
 
 const MockData = [
   { icon: "content_copy", title: "Segunda Via", desc: "Solicite sua energia" },
   { icon: "power_off", title: "Está sem Energia?", desc: "Informe sobre falta de energia" },
-  { icon: "mail", title: "Conta por E-mail", desc: "Cadestre seu email" },
+  { icon: "mail", title: "Conta por E-mail", desc: "Cadastre seu email" },
   { icon: "date_range", title: "Agendar Atendimento", desc: "Agende seu atendimento presencial" },
   { icon: "change_history", title: "Alteração de Titular", desc: "Troque o titular da conta" },
   { icon: "power", title: "Religação", desc: "Solicite o restabelecimento do fornecimento de energia" },
