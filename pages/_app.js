@@ -58,6 +58,7 @@ const App = ({ Component, pageProps }) => {
         />
         <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" href="/icons/favicon.ico" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

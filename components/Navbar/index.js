@@ -57,7 +57,7 @@ const Navbar = () => {
               </a>
             </Link>
             <Link href="/cliente/login">
-              <button class=" text-white bg-blue-500 border-0 py-1 px-6 focus:outline-none hover:bg-blue-600 rounded">
+              <button className=" text-white bg-blue-500 border-0 py-1 px-6 focus:outline-none hover:bg-blue-600 rounded">
                 Login
               </button>
             </Link>
