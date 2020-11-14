@@ -31,7 +31,7 @@ const Item = ({ children, title }) => {
       style={{ textAlign: "center" }}
     >
       <div className="border-solid border-2 border-blue-300 rounded-full mb-2">
-        <IconButton>{children}</IconButton>
+        <IconButton aria-label="Action Icon">{children}</IconButton>
       </div>
       <Typography textAlign="center" className="text-xs">
         {title}
