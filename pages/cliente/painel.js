@@ -1,28 +1,21 @@
 import React from "react";
-import Head from "../../components/Head";
+import { useRouter } from "next/router";
+import Head from "~/components/Head";
 
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Drawer from "@material-ui/core/Drawer";
 import Box from "@material-ui/core/Box";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import Badge from "@material-ui/core/Badge";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import NotificationsIcon from "@material-ui/icons/Notifications";
 
 import UserPointsCard from "~/components/UserPointsCard";
 import Copyright from "~/components/Copyright";
 import Chart from "~/components/Chart";
 import CurrentOrder from "~/components/CurrentOrder";
 import TipMenu from "~/components/TipMenu";
+import MenuClient from "~/components/MenuClient";
 
 const drawerWidth = 240;
 
@@ -91,7 +84,7 @@ const useStyles = makeStyles(theme => ({
     overflow: "auto"
   },
   container: {
-    paddingTop: theme.spacing(4),
+    paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(4)
   },
   paper: {
@@ -116,95 +109,48 @@ const useStyles = makeStyles(theme => ({
 
 export default function painel() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  const router = useRouter();
 
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <Container component="main" maxWidth="lg">
+    <div className={classes.root}>
       <Head title="Meu Painel" />
       <CssBaseline />
-      <AppBar
-        position="absolute"
-        className={clsx(classes.appBar, open && classes.appBarShift)}
-      >
-        <Toolbar className={classes.toolbar}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            className={clsx(
-              classes.menuButton,
-              open && classes.menuButtonHidden
-            )}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            component="h1"
-            variant="h6"
-            color="inherit"
-            noWrap
-            className={classes.title}
-          >
-            Área do cliente
-          </Typography>
-          <IconButton color="inherit" aria-label="notifications">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="permanent"
-        classes={{
-          paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose)
-        }}
-        open={open}
-      >
-        <div className={classes.toolbarIcon}>
-          <IconButton onClick={handleDrawerClose} aria-label="Close Icon">
-            <ChevronLeftIcon />
-          </IconButton>
-        </div>
-      </Drawer>
-      <Grid container spacing={3} className={classes.container}>
-        <Grid item xs={12} md={6}>
-          <Paper className={classes.pointsPaper}>
-            <UserPointsCard />
-          </Paper>
-        </Grid>
+      <MenuClient />
+      <main className={classes.content}>
+        <div className={classes.appBarSpacer} />
+        <Container component="main" maxWidth="lg">
+          <Grid container spacing={3} className={classes.container}>
+            <Grid item xs={12} md={6}>
+              <Paper className={classes.pointsPaper}>
+                <UserPointsCard onClick={() => router.push("/cliente/cashback")}/>
+              </Paper>
+            </Grid>
 
-        <Grid item xs={12} md={6}>
-          <Paper className={fixedHeightPaper}>
-            <CurrentOrder />
-          </Paper>
-        </Grid>
+            <Grid item xs={12} md={6}>
+              <Paper className={fixedHeightPaper}>
+                <CurrentOrder />
+              </Paper>
+            </Grid>
 
-        <Grid item xs={12} md={4}>
-          <Paper className={fixedHeightPaper}>
-            <TipMenu />
-          </Paper>
-        </Grid>
+            <Grid item xs={12} md={4}>
+              <Paper className={fixedHeightPaper}>
+                <TipMenu />
+              </Paper>
+            </Grid>
 
-        <Grid item xs={12} md={8}>
-          <Paper className={fixedHeightPaper}>
-            <Chart />
-          </Paper>
-        </Grid>
-      </Grid>
-      <Box mt={8}>
-        <Copyright />
-      </Box>
-    </Container>
+            <Grid item xs={12} md={8}>
+              <Paper className={fixedHeightPaper}>
+                <Chart />
+              </Paper>
+            </Grid>
+          </Grid>
+          <Box mt={8}>
+            <Copyright />
+          </Box>
+        </Container>
+      </main>
+    </div>
   );
 }
