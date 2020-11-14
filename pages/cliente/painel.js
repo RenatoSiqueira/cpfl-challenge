@@ -157,7 +157,7 @@ export default function painel() {
           >
             Área do cliente
           </Typography>
-          <IconButton color="inherit">
+          <IconButton color="inherit" aria-label="notifications">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
@@ -172,7 +172,7 @@ export default function painel() {
         open={open}
       >
         <div className={classes.toolbarIcon}>
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton onClick={handleDrawerClose} aria-label="Close Icon">
             <ChevronLeftIcon />
           </IconButton>
         </div>
