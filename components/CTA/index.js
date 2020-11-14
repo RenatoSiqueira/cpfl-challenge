@@ -10,7 +10,7 @@ const CTA = () => (
         <span className="block text-indigo-200 xl:inline">Evitar o corte</span>
       </h2>
       <p className="mt-1 mb-10 text-sm font-medium text-indigo-200 uppercase xl:text-base xl:tracking-wider lg:mb-0">
-        Veja como pagar suas contas Online!
+        Veja como realizar o pagamento de suas contas online.
       </p>
       <div className="flex mb-8 lg:mt-6 lg:mb-0">
         <div className="inline-flex">
