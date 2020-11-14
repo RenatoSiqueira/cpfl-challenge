@@ -1,4 +1,7 @@
 import React from "react";
+import { useRouter } from "next/router";
+import Head from "../../components/Head";
+
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -35,11 +38,15 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function SignIn() {
+export default function login() {
   const classes = useStyles();
+  const router = useRouter();
+
+  const handleRedirect = () => router.push("/cliente/painel");
 
   return (
     <Container component="main" maxWidth="xs">
+      <Head title="Login" />
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -76,11 +83,12 @@ export default function SignIn() {
             label="Lembrar senha"
           />
           <Button
-            type="submit"
+            type="button"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={handleRedirect}
           >
             Entrar
           </Button>
