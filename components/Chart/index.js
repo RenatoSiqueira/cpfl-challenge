@@ -6,11 +6,29 @@ import {
   XAxis,
   YAxis,
   Label,
-  ResponsiveContainer
+  ResponsiveContainer,
+  Tooltip
 } from "recharts";
 import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
+import Box from "@material-ui/core/Box";
 
-function createData(time, amount) {
+
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active) {
+    return (
+      <Paper>
+        <Box bgcolor="background.paper" p={1}>
+          <Typography m={1} variant="subtitle1" gutterBottom>{`Consumo de ${label} foi de ${payload[0].value} kW`}</Typography>
+        </Box>
+      </Paper>
+    );
+  }
+
+  return null;
+};
+
+const createData = (time, amount) => {
   return { time, amount };
 }
 
@@ -46,6 +64,7 @@ export default function Chart() {
             left: 24
           }}
         >
+          <Tooltip content={<CustomTooltip />} />
           <XAxis dataKey="time" stroke={theme.palette.text.secondary} />
           <YAxis stroke={theme.palette.text.secondary}>
             <Label
@@ -53,7 +72,7 @@ export default function Chart() {
               position="left"
               style={{ textAnchor: "middle", fill: theme.palette.text.primary }}
             >
-              Consumo (KW)
+              Consumo (kW)
             </Label>
           </YAxis>
           <Line
