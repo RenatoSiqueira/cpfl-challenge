@@ -1,13 +1,15 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Image from "next/image";
-import Head from "~/components/Head";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 
+import Head from "~/components/Head";
 import Copyright from "~/components/Copyright";
+import MenuClient from "~/components/MenuClient";
 
 const MockData = [
   {
@@ -63,23 +65,49 @@ const Item = ({ img, title, point }) => (
   </div>
 );
 
-const Cashback = () => (
-  <Container component="main" maxWidth="lg">
-    <Head title="Benefícios" />
-    <CssBaseline />
-    <div className="mt-3 text-4xl text-bold text-center text-blue-400 mb-5">
-      Benefícios
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: "flex"
+  },
+  appBarSpacer: theme.mixins.toolbar,
+  content: {
+    flexGrow: 1,
+    height: "100vh",
+    overflow: "auto"
+  },
+  container: {
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(4)
+  }
+}));
+
+const Cashback = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Head title="Benefícios" />
+      <CssBaseline />
+      <MenuClient />
+      <main className={classes.content}>
+        <div className={classes.appBarSpacer} />
+        <Container component="main" maxWidth="lg">
+          <div className="mt-3 text-4xl text-bold text-center text-blue-400 mb-5">
+            Benefícios
+          </div>
+          <Total points={2089} />
+          <div className="md:grid md:gap-4 md:grid-cols-3">
+            {MockData.map((e, i) => (
+              <Item key={i} {...e} />
+            ))}
+          </div>
+          <Box mt={8}>
+            <Copyright />
+          </Box>
+        </Container>
+      </main>
     </div>
-    <Total points={2089} />
-    <div className="md:grid md:gap-4 md:grid-cols-3">
-      {MockData.map((e, i) => (
-        <Item key={i} {...e} />
-      ))}
-    </div>
-    <Box mt={8}>
-      <Copyright />
-    </Box>
-  </Container>
-);
+  )
+};
 
 export default Cashback;
