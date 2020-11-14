@@ -1,40 +1,23 @@
 import React from "react";
+import Icon from "@material-ui/core/Icon";
+import { Height } from "@material-ui/icons";
 
 const MockData = [
-  { icon: "", title: "Segunda Via", desc: "Texto" },
-  { icon: "", title: "Está sem Energia?", desc: "texto" },
-  { icon: "", title: "Atualizar Cadastro", desc: "Texto" },
-  { icon: "", title: "Agendar Atendimento", desc: "Texto" },
-  {
-    icon: "",
-    title: "Conta Por Email",
-    desc: "Deseja receber sua fatura por e-mail?"
-  },
-  {
-    icon: "",
-    title: "Alteração de Titular",
-    desc: "Deseja receber sua fatura por e-mail?"
-  }
+  { icon: "content_copy", title: "Segunda Via", desc: "Solicite sua energia" },
+  { icon: "power_off", title: "Está sem Energia?", desc: "Informe sobre falta de energia" },
+  { icon: "mail", title: "Conta por E-mail", desc: "Cadestre seu email" },
+  { icon: "date_range", title: "Agendar Atendimento", desc: "Agende seu atendimento presencial" },
+  { icon: "change_history", title: "Alteração de Titular", desc: "Troque o titular da conta" },
+  { icon: "power", title: "Religação", desc: "Solicite o restabelecimento do fornecimento de energia" },
+  { icon: "payments", title: "Débito Automático", desc: "Cadastre sua conta em débito automático" },
+  { icon: "miscellaneous_services", title: "Outros serviços", desc: "Lista de mais serviços" }
 ];
 
-const Item = ({ title, desc }) => (
-  <div className="p-4 w-full md:w-1/3">
+const Item = ({ icon, title, desc }) => (
+  <div className="p-4 w-full md:w-1/3 h-full">
     <div className="p-16 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl">
-      <div className="relative inline-flex items-center justify-center w-16 h-16 overflow-hidden text-white rounded-full">
-        <svg
-          className="relative w-12 h-12 text-blue-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-          ></path>
-        </svg>
+      <div className="relative inline-flex items-center justify-center overflow-hidden text-blue-500">
+        <Icon fontSize="large"> {icon} </Icon>
       </div>
       <div className="mt-3 mb-6">
         <h5 className="pb-2 text-xl font-bold leading-6 text-gray-600">
@@ -47,7 +30,7 @@ const Item = ({ title, desc }) => (
 );
 
 const QuickAccess = () => (
-  <div className="pb-1 pt-10 md:pt-2 text-center text-gray-700 bg-gray-100 bg-cover pb-10">
+  <div className="pt-10 md:pt-2 text-center text-gray-700 bg-gray-100 bg-cover pb-10">
     <div className="container relative max-w-2xl px-5 pt-3 mx-auto sm:py-12 lg:px-0">
       <h2 className="mb-3 text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-4xl sm:text-center">
         Acesso <span className="inline-block text-blue-500">Rápido</span>

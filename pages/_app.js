@@ -36,6 +36,7 @@ const App = ({Component, pageProps}) => {
                 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="shortcut icon" href="/icons/favicon.ico" />
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
             </Head>
             <ThemeProvider theme={theme}>
               <CssBaseline />
