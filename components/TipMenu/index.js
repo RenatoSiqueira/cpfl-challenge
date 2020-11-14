@@ -10,17 +10,16 @@ import IconButton from "@material-ui/core/IconButton";
 const useStyles = makeStyles(theme => ({
   box: {
     flex: 1
-  },
-  button: {
-    margin: theme.spacing(1),
-    borderRadius: "5em",
-    borderColor: theme.palette.secondary.main,
-    borderWidth: 1
   }
+  //   button: {
+  //     margin: theme.spacing(1),
+  //     borderRadius: "5em",
+  //     borderColor: theme.palette.secondary.main,
+  //     borderWidth: 1
+  //   }
 }));
 
 const Item = ({ children, title }) => {
-  const classes = useStyles();
   return (
     <Grid
       item
@@ -31,10 +30,12 @@ const Item = ({ children, title }) => {
       alignItems="center"
       style={{ textAlign: "center" }}
     >
-      <IconButton color="inherit" className={classes.button}>
-        {children}
-      </IconButton>
-      <Typography textAlign="center">{title}</Typography>
+      <div className="border-solid border-2 border-blue-300 rounded-full mb-2">
+        <IconButton>{children}</IconButton>
+      </div>
+      <Typography textAlign="center" className="text-xs">
+        {title}
+      </Typography>
     </Grid>
   );
 };
@@ -54,13 +55,13 @@ export default function UserPointsCard() {
       >
         <Grid spacing={2} container justify="center" alignItems="flex-start">
           <Item title="2ª Via de Conta">
-            <Filter2Icon fontSize="large" />
+            <Filter2Icon style={{ color: "#63B3ED" }} className="m-3" />
           </Item>
           <Item title="Comunicar falta de energia">
-            <EmojiObjectsIcon fontSize="large" />
+            <EmojiObjectsIcon style={{ color: "#63B3ED" }} className="m-3" />
           </Item>
           <Item title="Receber conta por email">
-            <EmailIcon fontSize="large" />
+            <EmailIcon style={{ color: "#63B3ED" }} className="m-3" />
           </Item>
         </Grid>
       </Grid>

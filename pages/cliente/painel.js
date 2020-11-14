@@ -102,6 +102,15 @@ const useStyles = makeStyles(theme => ({
   },
   fixedHeight: {
     height: 230
+  },
+  pointsPaper: {
+    padding: theme.spacing(2),
+    display: "flex",
+    overflow: "auto",
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      height: 230
+    }
   }
 }));
 
@@ -170,7 +179,7 @@ export default function painel() {
       </Drawer>
       <Grid container spacing={3} className={classes.container}>
         <Grid item xs={12} md={6}>
-          <Paper className={fixedHeightPaper}>
+          <Paper className={classes.pointsPaper}>
             <UserPointsCard />
           </Paper>
         </Grid>

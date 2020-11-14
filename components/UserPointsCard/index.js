@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from '@material-ui/core/Link';
-import Moment from 'moment';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import Link from "@material-ui/core/Link";
+import Moment from "moment";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 
 function preventDefault(event) {
   event.preventDefault();
@@ -10,30 +10,40 @@ function preventDefault(event) {
 
 const useStyles = makeStyles({
   depositContext: {
-    flex: 1,
-  },
+    flex: 1
+  }
 });
 
-Moment.locale('pt-br')
+Moment.locale("pt-br");
 
 export default function UserPointsCard() {
-    const classes = useStyles();
-    return (
-      <React.Fragment>
-          <Typography component="h2" variant="h6" color="primary" gutterBottom>
-              CPoints disponíveis
-          </Typography>
-          <Typography component="p" variant="h4">
-              2085
-          </Typography>
-          <Typography color="textSecondary" className={classes.depositContext}>
-              em {Moment().format('ll')}
-          </Typography>
-          <div>
-              <Link color="primary" href="#" onClick={preventDefault}>
-                  Trocar pontos por benefícios
-              </Link>
-          </div>
-        </React.Fragment>
-    );
+  const classes = useStyles();
+  return (
+    <React.Fragment>
+      <div className="flex flex-row md:flex-col place-content-between">
+        <Typography
+          component="h2"
+          variant="h6"
+          style={{ color: "#63B3ED" }}
+          gutterBottom
+        >
+          <strong>CP</strong>oints disponíveis
+        </Typography>
+        <Typography component="p" variant="h4" style={{ color: "#63B3ED" }}>
+          2085
+        </Typography>
+      </div>
+      <Typography
+        style={{ color: "#63B3ED" }}
+        className={classes.depositContext}
+      >
+        em {Moment().format("ll")}
+      </Typography>
+      <div className="underline mt-1">
+        <Link style={{ color: "#63B3ED" }} href="#" onClick={preventDefault}>
+          Trocar pontos por benefícios
+        </Link>
+      </div>
+    </React.Fragment>
+  );
 }
