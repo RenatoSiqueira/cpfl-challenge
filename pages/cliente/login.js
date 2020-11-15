@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import Head from "../../components/Head";
+import Head from "~/components/Head";
 
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
