@@ -64,7 +64,8 @@ const Item = ({ i, cod, type, dateTime }) => (
     </div>
     <div className="flex flex-col text-gray-600">
       <span>
-        {cod} | <strong>{type}</strong>
+        <strong>{type}</strong> |{" "}
+        <span className="font-thin text-sm">{cod}</span>
       </span>
       <span>{dateTime}</span>
     </div>
@@ -76,7 +77,7 @@ const Item = ({ i, cod, type, dateTime }) => (
 
 const Search = ({ title, destak = false }) => (
   <div
-    className={`w-1/2 text-center text-green-600 font-bold ${
+    className={`w-full md:w-1/2 text-center text-green-600 font-bold ${
       destak ? "border-green-600 border-b-4" : "border-gray-300 border-b-2"
     } mt-2`}
   >
@@ -91,21 +92,21 @@ const Cat = () => (
       <Search title="Comunicação" destak />
       <Search title="Chamados" />
     </div>
-    <div className="grid grid-flow-col grid-cols-2 grid-rows-5 gap-1">
+    <div className="grid md:grid-flow-col md:grid-cols-2 grid-rows-5 gap-1">
       {MockData.map((e, i) => (
         <Item key={i} i={i + 1} {...e} />
       ))}
     </div>
-    <div className="flex justify-evenly mt-3 flex-col md:flex-row">
-      <button className="bg-transparent hover:bg-red-700 text-red-600 font-bold hover:text-white py-1 px-4 border border-red-500 hover:border-transparent rounded-full">
+    <div className="flex md:justify-evenly mt-3 flex-col md:flex-row">
+      <button className="mb-1 bg-transparent hover:bg-red-700 text-red-600 font-bold hover:text-white py-1 px-4 border border-red-500 hover:border-transparent rounded-full">
         <AddCircleIcon className="mr-2" />
         Ocorrências
       </button>
-      <button className="bg-transparent hover:bg-green-700 text-green-600 font-bold hover:text-white py-1 px-4 border border-green-500 hover:border-transparent rounded-full">
+      <button className="mb-1 bg-transparent hover:bg-green-700 text-green-600 font-bold hover:text-white py-1 px-4 border border-green-500 hover:border-transparent rounded-full">
         <AddCircleIcon className="mr-2" />
         Oportunidade de melhoria
       </button>
-      <button className="bg-transparent hover:bg-blue-700 text-blue-600 font-bold hover:text-white py-1 px-4 border border-blue-500 hover:border-transparent rounded-full">
+      <button className="mb-1 bg-transparent hover:bg-blue-700 text-blue-600 font-bold hover:text-white py-1 px-4 border border-blue-500 hover:border-transparent rounded-full">
         <AddCircleIcon className="mr-2" />
         Chamado
       </button>
