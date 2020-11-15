@@ -50,6 +50,12 @@ const App = ({ Component, pageProps }) => {
         <meta name="description" content="CPFL Challenge" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
+        <meta property="og:image" content="/icons/og-image.jpg" />
+        <meta property="og:image:width" content="192" />
+        <meta property="og:image:height" content="192" />
+        <meta property="og:title" content="CPFL Challenge" />
+        <meta property="og:description" content="MegaHack 5 - Solução time CPoint para empresa CPFL" />
+        <meta property="og:url" content="https://cpfl-challenge.vercel.app/" />
 
         <link
           rel="apple-touch-icon"
