@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid,
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer
 } from 'recharts';
+import Typography from "@material-ui/core/Typography";
 
 const data = [
   {
@@ -33,20 +34,30 @@ export default class Example extends PureComponent {
   render() {
     return (
       <React.Fragment>
-        <BarChart
-          width={500}
-          height={200}
-          data={data}
-          margin={{
-            right: 20, left: 20,
-          }}
-          barSize={15}
+        <Typography
+          component="h2"
+          variant="h6"
+          gutterBottom
+          style={{ color: "#ff1744" }}
         >
-          <XAxis dataKey="name" scale="point" />
-          <YAxis />
-          <CartesianGrid strokeDasharray="3 3" />
-          <Bar dataKey="pv" fill="#8884d8" background={{ fill: '#eee' }} />
-        </BarChart>
+          Comunicação
+        </Typography>
+        <ResponsiveContainer>
+          <BarChart
+            width={500}
+            height={200}
+            data={data}
+            margin={{
+              right: 20, left: 20,
+            }}
+            barSize={15}
+          >
+            <XAxis dataKey="name" scale="point" />
+            <YAxis />
+            <CartesianGrid strokeDasharray="3 3" />
+            <Bar dataKey="pv" fill="#8884d8" background={{ fill: '#eee' }} />
+          </BarChart>
+        </ResponsiveContainer>
       </React.Fragment>
     );
   }
