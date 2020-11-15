@@ -20,6 +20,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import HomeIcon from '@material-ui/icons/Home';
+import Dialpad from '@material-ui/icons/Dialpad';
 import History from '@material-ui/icons/History';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
@@ -254,6 +255,12 @@ export default function MenuClient() {
               <HomeIcon />
             </ListItemIcon>
             <ListItemText primary="Início" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <Dialpad />
+            </ListItemIcon>
+            <ListItemText primary="Teclado" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>

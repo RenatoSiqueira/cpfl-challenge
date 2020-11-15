@@ -13,6 +13,7 @@ import Paper from "@material-ui/core/Paper";
 import UserPointsCard from "~/components/UserPointsCard";
 import Copyright from "~/components/Copyright";
 import ChartCall from "~/components/ChartCall";
+import ChartDebit from "~/components/ChartDebit";
 import CurrentOrder from "~/components/CurrentOrder";
 import TipMenu from "~/components/TipMenu";
 import MenuCentral from "~/components/MenuCentral";
@@ -129,11 +130,13 @@ export default function painel() {
 
             <Grid item xs={12} md={6}>
               <Paper className={fixedHeightPaper}>
+                <ChartDebit />
               </Paper>
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={6}>
               <Paper className={fixedHeightPaper}>
+                
               </Paper>
             </Grid>
 
