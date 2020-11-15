@@ -11,10 +11,11 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
-import AccountCircle from "@material-ui/icons/AccountCircle";
+import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+
 
 import Copyright from "~/components/Copyright";
 
@@ -27,14 +28,22 @@ const useStyles = makeStyles(theme => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main
+    backgroundColor: theme.palette.error.main
   },
   form: {
     width: "100%",
     marginTop: theme.spacing(1)
   },
   submit: {
-    margin: theme.spacing(3, 0, 2)
+    margin: theme.spacing(3, 0, 2),
+    backgroundColor: theme.palette.error.main,
+    color: '#fff',
+    '&:hover': {
+        backgroundColor: theme.palette.error.dark,
+    }
+  },
+  forgot: {
+    color: theme.palette.error.main      
   }
 }));
 
@@ -42,18 +51,18 @@ export default function login() {
   const classes = useStyles();
   const router = useRouter();
 
-  const handleRedirect = () => router.push("/cliente/painel");
+  const handleRedirect = () => router.push("/atendimento/central");
 
   return (
     <Container component="main" maxWidth="xs">
-      <Head title="Login" />
+      <Head title="Área de Atendimento" />
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
-          <AccountCircle />
+          <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Login
+            Área de Atendimento
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -79,14 +88,13 @@ export default function login() {
             autoComplete="current-password"
           />
           <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
+            control={<Checkbox value="remember" />}
             label="Lembrar senha"
           />
           <Button
             type="button"
             fullWidth
             variant="contained"
-            color="primary"
             className={classes.submit}
             onClick={handleRedirect}
           >
@@ -94,13 +102,8 @@ export default function login() {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
-                Esqueceu a senha?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="#" variant="body2">
-                {"Ainda não tem conta? crie uma"}
+              <Link href="#" variant="body2" className={classes.forgot}>
+                Esqueceu a senha? Fale com o suporte!
               </Link>
             </Grid>
           </Grid>

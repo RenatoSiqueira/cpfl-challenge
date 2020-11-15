@@ -3,37 +3,13 @@ import Icon from "@material-ui/core/Icon";
 
 const MockData = [
   { icon: "content_copy", title: "Segunda Via", desc: "Solicite sua energia" },
-  {
-    icon: "power_off",
-    title: "Está sem Energia?",
-    desc: "Informe sobre falta de energia"
-  },
-  { icon: "mail", title: "Conta por E-mail", desc: "Cadestre seu email" },
-  {
-    icon: "date_range",
-    title: "Agendar Atendimento",
-    desc: "Agende seu atendimento presencial"
-  },
-  {
-    icon: "change_history",
-    title: "Alteração de Titular",
-    desc: "Troque o titular da conta"
-  },
-  {
-    icon: "power",
-    title: "Religação",
-    desc: "Solicite o restabelecimento do fornecimento de energia"
-  },
-  {
-    icon: "payments",
-    title: "Débito Automático",
-    desc: "Cadastre sua conta em débito automático"
-  },
-  {
-    icon: "miscellaneous_services",
-    title: "Outros serviços",
-    desc: "Lista de mais serviços"
-  }
+  { icon: "power_off", title: "Está sem Energia?", desc: "Informe sobre falta de energia" },
+  { icon: "mail", title: "Conta por E-mail", desc: "Cadastre seu email" },
+  { icon: "date_range", title: "Agendar Atendimento", desc: "Agende seu atendimento presencial" },
+  { icon: "change_history", title: "Alteração de Titular", desc: "Troque o titular da conta" },
+  { icon: "power", title: "Religação", desc: "Solicite o restabelecimento do fornecimento de energia" },
+  { icon: "payments", title: "Débito Automático", desc: "Cadastre sua conta em débito automático" },
+  { icon: "miscellaneous_services", title: "Outros serviços", desc: "Lista de mais serviços" }
 ];
 
 const Item = ({ icon, title, desc }) => (
