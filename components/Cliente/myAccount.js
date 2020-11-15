@@ -2,19 +2,23 @@ import React from "react";
 import Head from "~/components/Head";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
-import Filter2Icon from "@material-ui/icons/Filter2";
+import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
+import EmailIcon from "@material-ui/icons/Email";
+import EventAvailableIcon from "@material-ui/icons/EventAvailable";
+import AutorenewIcon from "@material-ui/icons/Autorenew";
+import AccountBoxIcon from "@material-ui/icons/AccountBox";
+import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
 
 import Item from "~/components/Items";
 
 const MockData = [
-  { icon: Filter2Icon, title: "Contas e pagamentos" },
-  { icon: Filter2Icon, title: "Receber conta por Email" },
-  { icon: Filter2Icon, title: "Alterar data de vencimento" },
-  { icon: Filter2Icon, title: "Cadastrar Débito Automático" },
-  { icon: Filter2Icon, title: "Alterar Titularidade da Conta" },
-  { icon: Filter2Icon, title: "Negociar Débitos" }
+  { icon: MonetizationOnIcon, title: "Contas e pagamentos" },
+  { icon: EmailIcon, title: "Receber conta por Email" },
+  { icon: EventAvailableIcon, title: "Alterar data de vencimento" },
+  { icon: AutorenewIcon, title: "Cadastrar Débito Automático" },
+  { icon: AccountBoxIcon, title: "Alterar Titularidade da Conta" },
+  { icon: EmojiEmotionsIcon, title: "Negociar Débitos" }
 ];
 
 const Services = () => (
