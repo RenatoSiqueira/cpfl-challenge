@@ -14,7 +14,10 @@ const MockData = [
 
 const Item = ({ icon, title, desc }) => (
   <div className="p-4 w-full md:w-1/3 h-full">
-    <div className="p-16 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl">
+    <div
+      className="pt-10 px-2 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl"
+      style={{ height: 240 }}
+    >
       <div className="relative inline-flex items-center justify-center overflow-hidden text-blue-500">
         <Icon fontSize="large"> {icon} </Icon>
       </div>
