@@ -10,7 +10,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 
-import UserPointsCard from "~/components/UserPointsCard";
+import CallStatusCard from "~/components/CallStatusCard";
 import Copyright from "~/components/Copyright";
 import ChartCall from "~/components/ChartCall";
 import ChartDebit from "~/components/ChartDebit";
@@ -126,18 +126,19 @@ export default function painel() {
           <Grid container spacing={3} className={classes.container}>
             <Grid item xs={12} md={6}>
               <Paper className={classes.pointsPaper}>
-              </Paper>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Paper className={fixedHeightPaper}>
-                <ChartDebit />
+                <CallStatusCard />
               </Paper>
             </Grid>
 
             <Grid item xs={12} md={6}>
               <Paper className={fixedHeightPaper}>
                 <Receive />
+              </Paper>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Paper className={fixedHeightPaper}>
+                <ChartDebit />
               </Paper>
             </Grid>
 

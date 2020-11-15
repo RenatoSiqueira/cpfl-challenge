@@ -55,7 +55,7 @@ export default class Example extends PureComponent {
             <XAxis dataKey="name" scale="point" />
             <YAxis />
             <CartesianGrid strokeDasharray="3 3" />
-            <Bar dataKey="pv" fill="#8884d8" background={{ fill: '#eee' }} />
+            <Bar dataKey="pv" fill="#2f855a" background={{ fill: '#eee' }} />
           </BarChart>
         </ResponsiveContainer>
       </React.Fragment>
