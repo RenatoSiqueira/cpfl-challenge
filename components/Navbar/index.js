@@ -28,27 +28,32 @@ const Navbar = () => {
 
           <div
             className={
-              "flex-col md:items-end md:flex" +
-              (isOpen ? " flex" : " hidden")
+              "flex-col md:items-end md:flex" + (isOpen ? " flex" : " hidden")
             }
           >
-            <div 
-              className={ 
-                "mx-2 my-2 " + (isOpen ? "flex-col space-y-2" : "flex-row space-x-2")
+            <div
+              className={
+                "mx-2 my-2 " +
+                (isOpen ? "flex-col space-y-2" : "flex-row space-x-2")
               }
             >
               <Link href="/cliente/login">
-                <button className={"space-x-1 text-white bg-blue-500 border-0 py-1 px-4 focus:outline-none hover:bg-blue-600 rounded" + (isOpen ? " w-full": "")}>
+                <button
+                  className={
+                    "space-x-1 text-white bg-blue-500 border-0 py-1 px-4 focus:outline-none hover:bg-blue-600 rounded" +
+                    (isOpen ? " w-full" : "")
+                  }
+                >
                   <AccountCircle />
                   <span>Área do Cliente</span>
                 </button>
               </Link>
-              <Link href="/atendimento/login">
+              {/* <Link href="/atendimento/login">
                 <button className={"space-x-1 text-white bg-red-600 border-0 py-1 px-4 focus:outline-none hover:bg-red-700 rounded" + (isOpen ? " w-full": "")} >
                   <LockOutlined />
                   <span>Área Restrita</span>
                 </button>
-              </Link>
+              </Link> */}
             </div>
             <div className="md:flex md:flex-row">
               <Link href="/">
@@ -76,7 +81,6 @@ const Navbar = () => {
                   Seu Negócio
                 </a>
               </Link>
-
             </div>
           </div>
         </div>

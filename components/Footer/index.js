@@ -12,7 +12,8 @@ const MockData = [
       "Trabalhe conosco",
       "Fornecedores",
       "Relatório Anual",
-      "Ética CPFL"
+      "Ética CPFL",
+      "Painel Atendimento"
     ]
   },
   {
@@ -46,7 +47,10 @@ const BlockItems = ({ title, items }) => (
       {title}
     </p>
     {items?.map((e, i) => (
-      <Link href="/" key={i}>
+      <Link
+        href={e === "Painel Atendimento" ? "/atendimento/login" : "/"}
+        key={i}
+      >
         <a className="flex mb-3 md:mb-2 text-sm font-medium text-gray-800 hover:text-purple-800 transition-colors duration-100 ease-in">
           {e}
         </a>
