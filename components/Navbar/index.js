@@ -28,7 +28,8 @@ const Navbar = () => {
 
           <div
             className={
-              "flex-col md:items-end md:flex" + (isOpen ? " flex" : " hidden")
+              "flex-col md:items-end md:flex" +
+              (isOpen ? " flex flex-col-reverse md:flex-col" : " hidden")
             }
           >
             <div
