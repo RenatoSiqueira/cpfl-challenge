@@ -51,7 +51,7 @@ export default function login() {
   const classes = useStyles();
   const router = useRouter();
 
-  const handleRedirect = () => router.push("/atendimento/contactCenter");
+  const handleRedirect = () => router.push("/atendimento/central");
 
   return (
     <Container component="main" maxWidth="xs">
