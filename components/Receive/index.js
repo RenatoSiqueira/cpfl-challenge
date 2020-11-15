@@ -3,6 +3,7 @@ import React from "react";
 import InfoIcon from "@material-ui/icons/Info";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import SearchIcon from "@material-ui/icons/Search";
+import EjectIcon from "@material-ui/icons/Eject";
 
 const MockData = [
   {
@@ -76,13 +77,30 @@ const Item = ({ i, cod, type, dateTime }) => (
 );
 
 const Search = ({ title, destak = false }) => (
-  <div
-    className={`w-full md:w-1/2 text-center text-green-600 font-bold ${
-      destak ? "border-green-600 border-b-4" : "border-gray-300 border-b-2"
-    } mt-2`}
-  >
-    <span className="mx-auto">{title}</span>
-    <SearchIcon className="float-right mr-2" />
+  <div className="w-full md:w-1/2  flex flex-col">
+    <div
+      className={`text-center text-green-600 font-bold ${
+        destak ? "border-green-600 border-b-4" : "border-gray-300 border-b-2"
+      } mt-2`}
+    >
+      <span className="mx-auto">{title}</span>
+      <SearchIcon className="float-right mr-2" />
+    </div>
+    {destak && (
+      <div
+        className="mb-2 self-center"
+        style={{
+          content: "",
+          display: "inline-block",
+          verticalAlign: "middle",
+          width: 0,
+          height: 0,
+          borderLeft: "8px solid transparent",
+          borderRight: "8px solid transparent",
+          borderTop: "8px solid green"
+        }}
+      ></div>
+    )}
   </div>
 );
 
