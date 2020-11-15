@@ -10,19 +10,20 @@ import Badge from "@material-ui/core/Badge";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import Divider from '@material-ui/core/Divider';
-import List from '@material-ui/core/List';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import SearchIcon from '@material-ui/icons/Search';
-import InputBase from '@material-ui/core/InputBase';
-import FeaturedPlayListIcon from '@material-ui/icons/FeaturedPlayList';
-import HomeIcon from '@material-ui/icons/Home';
-import BuildIcon from '@material-ui/icons/Build';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import DashboardIcon from "@material-ui/icons/Dashboard";
+import Divider from "@material-ui/core/Divider";
+import List from "@material-ui/core/List";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import SearchIcon from "@material-ui/icons/Search";
+import InputBase from "@material-ui/core/InputBase";
+import FeaturedPlayListIcon from "@material-ui/icons/FeaturedPlayList";
+import HomeIcon from "@material-ui/icons/Home";
+import BuildIcon from "@material-ui/icons/Build";
+import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
+import Link from "next/link";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -90,10 +91,10 @@ const useStyles = makeStyles(theme => ({
     }
   },
   sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex"
+    }
   },
   appBarSpacer: theme.mixins.toolbar,
   content: {
@@ -125,47 +126,56 @@ const useStyles = makeStyles(theme => ({
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
   },
   inputRoot: {
-    color: 'inherit',
+    color: "inherit"
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "20ch"
+    }
   },
   grow: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2)
   },
   search: {
-    position: 'relative',
+    position: "relative",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+    "&:hover": {
+      backgroundColor: fade(theme.palette.common.white, 0.25)
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
-      width: 'auto',
-    },
-  },
+      width: "auto"
+    }
+  }
 }));
+
+const Item = ({ title, link, children }) => (
+  <Link href={link}>
+    <ListItem button>
+      <ListItemIcon>{children}</ListItemIcon>
+      <ListItemText primary={title} />
+    </ListItem>
+  </Link>
+);
 
 export default function MenuClient() {
   const classes = useStyles();
@@ -207,7 +217,7 @@ export default function MenuClient() {
           >
             Área do cliente
           </Typography>
-            <div className={classes.sectionDesktop}>
+          <div className={classes.sectionDesktop}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />
@@ -216,9 +226,9 @@ export default function MenuClient() {
                 placeholder="Pesquisar..."
                 classes={{
                   root: classes.inputRoot,
-                  input: classes.inputInput,
+                  input: classes.inputInput
                 }}
-                inputProps={{ 'aria-label': 'search' }}
+                inputProps={{ "aria-label": "search" }}
               />
             </div>
             <div className={classes.grow} />
@@ -249,30 +259,18 @@ export default function MenuClient() {
         </div>
         <Divider />
         <List>
-          <ListItem button>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Início" />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <FeaturedPlayListIcon />
-            </ListItemIcon>
-            <ListItemText primary="Minha conta" />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <BuildIcon />
-            </ListItemIcon>
-            <ListItemText primary="Serviços" />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <HelpOutlineIcon />
-            </ListItemIcon>
-            <ListItemText primary="Ajuda" />
-          </ListItem>
+          <Item title="Início" link="/cliente/painel">
+            <HomeIcon />
+          </Item>
+          <Item title="Minha conta" link="/cliente/myAccount">
+            <FeaturedPlayListIcon />
+          </Item>
+          <Item title="Serviços" link="/cliente/services">
+            <BuildIcon />
+          </Item>
+          <Item title="Ajuda" link="/cliente/painel">
+            <HelpOutlineIcon />
+          </Item>
         </List>
       </Drawer>
     </React.Fragment>

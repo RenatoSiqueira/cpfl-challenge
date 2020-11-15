@@ -1,28 +1,20 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Head from "~/components/Head";
+import Link from "next/link";
 
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Box from "@material-ui/core/Box";
-import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 
 import UserPointsCard from "~/components/UserPointsCard";
-import Copyright from "~/components/Copyright";
 import Chart from "~/components/Chart";
 import CurrentOrder from "~/components/CurrentOrder";
 import TipMenu from "~/components/TipMenu";
-import MenuClient from "~/components/MenuClient";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex"
-  },
   toolbar: {
     paddingRight: 24
   },
@@ -77,12 +69,6 @@ const useStyles = makeStyles(theme => ({
       width: theme.spacing(9)
     }
   },
-  appBarSpacer: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    height: "100vh",
-    overflow: "auto"
-  },
   container: {
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(4)
@@ -107,50 +93,42 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function painel() {
+const Dash = () => {
   const classes = useStyles();
-  const router = useRouter();
-
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <div className={classes.root}>
+    <>
       <Head title="Meu Painel" />
-      <CssBaseline />
-      <MenuClient />
-      <main className={classes.content}>
-        <div className={classes.appBarSpacer} />
-        <Container component="main" maxWidth="lg">
-          <Grid container spacing={3} className={classes.container}>
-            <Grid item xs={12} md={6}>
-              <Paper className={classes.pointsPaper}>
-                <UserPointsCard onClick={() => router.push("/cliente/cashback")}/>
-              </Paper>
-            </Grid>
+      <Grid container spacing={3} className={classes.container}>
+        <Grid item xs={12} md={6}>
+          <Link href="/cliente/cashback">
+            <Paper className={classes.pointsPaper}>
+              <UserPointsCard />
+            </Paper>
+          </Link>
+        </Grid>
 
-            <Grid item xs={12} md={6}>
-              <Paper className={fixedHeightPaper}>
-                <CurrentOrder />
-              </Paper>
-            </Grid>
+        <Grid item xs={12} md={6}>
+          <Paper className={fixedHeightPaper}>
+            <CurrentOrder />
+          </Paper>
+        </Grid>
 
-            <Grid item xs={12} md={4}>
-              <Paper className={fixedHeightPaper}>
-                <TipMenu />
-              </Paper>
-            </Grid>
+        <Grid item xs={12} md={4}>
+          <Paper className={fixedHeightPaper}>
+            <TipMenu />
+          </Paper>
+        </Grid>
 
-            <Grid item xs={12} md={8}>
-              <Paper className={fixedHeightPaper}>
-                <Chart />
-              </Paper>
-            </Grid>
-          </Grid>
-          <Box mt={8}>
-            <Copyright />
-          </Box>
-        </Container>
-      </main>
-    </div>
+        <Grid item xs={12} md={8}>
+          <Paper className={fixedHeightPaper}>
+            <Chart />
+          </Paper>
+        </Grid>
+      </Grid>
+    </>
   );
-}
+};
+
+export default Dash;

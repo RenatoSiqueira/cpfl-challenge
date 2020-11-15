@@ -7,7 +7,6 @@ import Container from "@material-ui/core/Container";
 import Filter2Icon from "@material-ui/icons/Filter2";
 
 import Item from "~/components/Items";
-import Copyright from "~/components/Copyright";
 
 const MockData = [
   { icon: Filter2Icon, title: "Contas e pagamentos" },
@@ -22,9 +21,7 @@ const Services = () => (
   <Container component="main" maxWidth="lg">
     <Head title="Minha Conta" />
     <CssBaseline />
-    <div className="mt-3 text-4xl text-bold text-center text-blue-400 mb-5">
-      Minha Conta
-    </div>
+    <div className="mt-3 text-4xl text-bold text-center mb-5">Minha Conta</div>
     <div className="md:grid md:gap-4 md:grid-cols-3">
       {MockData.map((e, i) => (
         <Item title={e.title}>
@@ -32,9 +29,6 @@ const Services = () => (
         </Item>
       ))}
     </div>
-    <Box mt={8}>
-      <Copyright />
-    </Box>
   </Container>
 );
 
