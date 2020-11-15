@@ -19,7 +19,7 @@ const CustomTooltip = ({ active, payload, label }) => {
     return (
       <Paper>
         <Box bgcolor="background.paper" p={1}>
-          <Typography m={1} variant="subtitle1" gutterBottom>{`Consumo de ${label} foi de ${payload[0].value} kW`}</Typography>
+          <Typography m={1} variant="subtitle1" gutterBottom>{`Inadimplência de ${label} foi de R$ ${payload[0].value}`}</Typography>
         </Box>
       </Paper>
     );
@@ -33,12 +33,12 @@ const createData = (time, amount) => {
 }
 
 const data = [
-  createData("JAN", 240),
-  createData("FEV", 370),
-  createData("MAR", 489),
-  createData("ABR", 340),
-  createData("MAI", 200),
-  createData("JUN", 123)
+  createData("JAN", 1240),
+  createData("FEV", 1370),
+  createData("MAR", 2489),
+  createData("ABR", 1340),
+  createData("MAI", 1200),
+  createData("JUN", 523)
 ];
 
 export default function Chart() {

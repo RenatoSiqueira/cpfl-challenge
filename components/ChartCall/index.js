@@ -40,7 +40,7 @@ export default class Example extends PureComponent {
           gutterBottom
           style={{ color: "#2f855a" }}
         >
-          Comunicação
+          Fontes de Comunicação
         </Typography>
         <ResponsiveContainer>
           <BarChart
