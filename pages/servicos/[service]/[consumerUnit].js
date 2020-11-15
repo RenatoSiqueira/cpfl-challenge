@@ -2,20 +2,21 @@ import React from "react";
 import { useRouter } from "next/router";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import ShareIcon from "@material-ui/icons/Share";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+
 import Image from "next/image";
+import Link from "next/link";
 
 const MockData = [
   {
     value: "217,98",
-    venc: "21/12/2020",
-    title: "Segunda Via",
-    desc: "Solicite sua energia"
+    venc: "21/12/2020"
   }
 ];
 
-const Item = ({ icon, value, venc, title, desc }) => (
+const Item = ({ value, venc }) => (
   <div className="p-4 w-full h-full">
-    <div className="p-16 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl">
+    <div className="p-8 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl">
       <div className="mt-3 mb-6 text-center">
         <h5 className="pb-2 text-4xl font-bold leading-6 text-gray-600">
           R$ {value}
@@ -34,9 +35,14 @@ const Item = ({ icon, value, venc, title, desc }) => (
             <button className="py-2 rounded-full text-white font-bold bg-blue-600">
               Código Copiado <CheckCircleIcon className="ml-5" />
             </button>
-            <button className="mt-2 py-2 font-bold rounded-full border-solid border-2 border-gray-600">
+            <button className="mt-2 py-2 font-bold rounded-full text-gray-700 border-solid border-2 border-gray-600">
               <ShareIcon className="mr-2" /> Compartilhar
             </button>
+            <Link href="/">
+              <button className="mt-8 py-2 font-bold rounded-full text-gray-700 border-solid border-2 border-gray-600">
+                <ArrowBackIcon className="mr-2" /> Voltar
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -68,7 +74,7 @@ const Services = () => {
               width={99}
               height={61}
             />
-            <span className="ml-3 text-xl">
+            <span className="ml-3 text-xl text-gray-700">
               {section?.toUpperCase()}
               <br />
               Unidade Consumidora: {consumerUnit}
