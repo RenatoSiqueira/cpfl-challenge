@@ -35,11 +35,11 @@ const Item = ({ value, venc }) => (
             <button className="py-2 rounded-full text-white font-bold bg-blue-600">
               Código Copiado <CheckCircleIcon className="ml-5" />
             </button>
-            <button className="mt-2 py-2 font-bold rounded-full text-gray-700 border-solid border-2 border-gray-600">
+            <button className="mt-2 py-2 font-bold rounded-full hover:bg-blue-600 hover:text-white text-gray-700 border-solid border-2 border-gray-600">
               <ShareIcon className="mr-2" /> Compartilhar
             </button>
             <Link href="/">
-              <button className="mt-8 py-2 font-bold rounded-full text-gray-700 border-solid border-2 border-gray-600">
+              <button className="mt-8 py-2 font-bold hover:bg-blue-600 hover:text-white rounded-full text-gray-700 border-solid border-2 border-gray-600">
                 <ArrowBackIcon className="mr-2" /> Voltar
               </button>
             </Link>
