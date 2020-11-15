@@ -13,7 +13,6 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import DashboardIcon from "@material-ui/icons/Dashboard";
 import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
 import AccountCircle from "@material-ui/icons/AccountCircle";
@@ -24,6 +23,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import BuildIcon from "@material-ui/icons/Build";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import Link from "next/link";
+import Image from "next/image";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -253,6 +253,14 @@ export default function MenuClient() {
         open={open}
       >
         <div className={classes.toolbarIcon}>
+          <div className="w-full text-center">
+            <Image
+              src="/images/brand/logo-cpfl-energia.png"
+              alt="CPFL"
+              width={99}
+              height={61}
+            />
+          </div>
           <IconButton onClick={handleDrawerClose} aria-label="Close Icon">
             <ChevronLeftIcon />
           </IconButton>
