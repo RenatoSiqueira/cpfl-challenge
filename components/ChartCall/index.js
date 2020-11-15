@@ -38,7 +38,7 @@ export default class Example extends PureComponent {
           component="h2"
           variant="h6"
           gutterBottom
-          style={{ color: "#ff1744" }}
+          style={{ color: "#2f855a" }}
         >
           Comunicação
         </Typography>
