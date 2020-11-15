@@ -254,12 +254,16 @@ export default function MenuClient() {
       >
         <div className={classes.toolbarIcon}>
           <div className="w-full text-center">
-            <Image
-              src="/images/brand/logo-cpfl-energia.png"
-              alt="CPFL"
-              width={99}
-              height={61}
-            />
+            <Link href="/">
+              <a>
+                <Image
+                  src="/images/brand/logo-cpfl-energia.png"
+                  alt="CPFL"
+                  width={99}
+                  height={61}
+                />
+              </a>
+            </Link>
           </div>
           <IconButton onClick={handleDrawerClose} aria-label="Close Icon">
             <ChevronLeftIcon />

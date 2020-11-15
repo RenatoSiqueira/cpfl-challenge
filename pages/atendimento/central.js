@@ -15,6 +15,7 @@ import Copyright from "~/components/Copyright";
 import ChartCall from "~/components/ChartCall";
 import ChartDebit from "~/components/ChartDebit";
 import CurrentOrder from "~/components/CurrentOrder";
+import Receive from "~/components/Receive";
 import TipMenu from "~/components/TipMenu";
 import MenuCentral from "~/components/MenuCentral";
 
@@ -136,7 +137,7 @@ export default function painel() {
 
             <Grid item xs={12} md={6}>
               <Paper className={fixedHeightPaper}>
-                
+                <Receive />
               </Paper>
             </Grid>
 

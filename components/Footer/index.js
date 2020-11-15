@@ -79,7 +79,7 @@ const Footer = () => (
         <BlockItems key={i} {...e} />
       ))}
     </div>
-    <div className="flex flex-col items-center md:flex-row justify-between items-start md:items-center border-t border-gray-200 pt-10 mt-10">
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-t border-gray-200 pt-10 mt-10">
       <p className="text-gray-700 font-medium text-xs text-left mb-2 md:mb-0">
         Todos os direitos reservados
       </p>

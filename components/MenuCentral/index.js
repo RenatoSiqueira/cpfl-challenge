@@ -23,6 +23,8 @@ import HomeIcon from '@material-ui/icons/Home';
 import Dialpad from '@material-ui/icons/Dialpad';
 import History from '@material-ui/icons/History';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import Link from "next/link";
+import Image from "next/image";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -208,7 +210,7 @@ export default function MenuClient() {
           >
             Central de Atendimento
           </Typography>
-            <div className={classes.sectionDesktop}>
+          <div className={classes.sectionDesktop}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />
@@ -244,6 +246,18 @@ export default function MenuClient() {
         open={open}
       >
         <div className={classes.toolbarIcon}>
+          <div className="w-full text-center">
+            <Link href="/">
+              <a>
+                <Image
+                  src="/images/brand/logo-cpfl-energia.png"
+                  alt="CPFL"
+                  width={99}
+                  height={61}
+                />
+              </a>
+            </Link>
+          </div>
           <IconButton onClick={handleDrawerClose} aria-label="Close Icon">
             <ChevronLeftIcon />
           </IconButton>
