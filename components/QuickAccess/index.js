@@ -1,21 +1,47 @@
 import React from "react";
 import Icon from "@material-ui/core/Icon";
-import { Height } from "@material-ui/icons";
 
 const MockData = [
   { icon: "content_copy", title: "Segunda Via", desc: "Solicite sua energia" },
-  { icon: "power_off", title: "Está sem Energia?", desc: "Informe sobre falta de energia" },
+  {
+    icon: "power_off",
+    title: "Está sem Energia?",
+    desc: "Informe sobre falta de energia"
+  },
   { icon: "mail", title: "Conta por E-mail", desc: "Cadestre seu email" },
-  { icon: "date_range", title: "Agendar Atendimento", desc: "Agende seu atendimento presencial" },
-  { icon: "change_history", title: "Alteração de Titular", desc: "Troque o titular da conta" },
-  { icon: "power", title: "Religação", desc: "Solicite o restabelecimento do fornecimento de energia" },
-  { icon: "payments", title: "Débito Automático", desc: "Cadastre sua conta em débito automático" },
-  { icon: "miscellaneous_services", title: "Outros serviços", desc: "Lista de mais serviços" }
+  {
+    icon: "date_range",
+    title: "Agendar Atendimento",
+    desc: "Agende seu atendimento presencial"
+  },
+  {
+    icon: "change_history",
+    title: "Alteração de Titular",
+    desc: "Troque o titular da conta"
+  },
+  {
+    icon: "power",
+    title: "Religação",
+    desc: "Solicite o restabelecimento do fornecimento de energia"
+  },
+  {
+    icon: "payments",
+    title: "Débito Automático",
+    desc: "Cadastre sua conta em débito automático"
+  },
+  {
+    icon: "miscellaneous_services",
+    title: "Outros serviços",
+    desc: "Lista de mais serviços"
+  }
 ];
 
 const Item = ({ icon, title, desc }) => (
   <div className="p-4 w-full md:w-1/3 h-full">
-    <div className="p-16 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl">
+    <div
+      className="pt-10 px-2 transition-all duration-150 bg-white rounded-lg shadow-xl ease hover:shadow-2xl"
+      style={{ height: 240 }}
+    >
       <div className="relative inline-flex items-center justify-center overflow-hidden text-blue-500">
         <Icon fontSize="large"> {icon} </Icon>
       </div>
